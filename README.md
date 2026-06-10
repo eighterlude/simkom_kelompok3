@@ -1,1 +1,1 @@
-# simkom_kelompok3
+# Sistem Informasi Manajemen Kegiatan Organisasi Mahasiswa (SIMKOM)
