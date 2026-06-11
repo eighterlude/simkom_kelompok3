@@ -19,16 +19,19 @@ if (isset($_POST['login'])) {
     if ($data) {
 
         $_SESSION['login'] = true;
-        $_SESSION['nama'] = $data['nama'];
+        $_SESSION['nama'] = $data['nama_lengkap'];
         $_SESSION['role'] = $data['role'];
         $_SESSION['id_user'] = $data['id_user'];
 
         if ($data['role'] == 'admin') {
             header("Location: ../dashboard/admin.php");
+            exit();
         } elseif ($data['role'] == 'anggota') {
             header("Location: ../dashboard/anggota.php");
+            exit();
         } else {
             header("Location: ../dashboard/pembina.php");
+            exit();
         }
 
     } else {
